@@ -1,0 +1,175 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 70px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  position: relative;
+  z-index: 1400;
+}
+
+.logo-container img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-container:hover img {
+  transform: scale(1.05);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Add rotation animation for the second link's logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Style the card to center its content and be responsive */
+.card {
+  padding: 2em;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.read-the-docs {
+  color: #555;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Improved responsive breakpoints */
+@media (max-width: 1200px) {
+  .card {
+    padding: 1.75em;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5em;
+    font-size: 0.95rem;
+  }
+
+  .logo {
+    height: 4em;
+    padding: 1em;
+  }
+  
+  .logo-container img {
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.25em;
+    font-size: 0.9rem;
+  }
+  
+  .logo-container {
+    padding: 0 8px;
+  }
+  
+  .logo-container img {
+    height: 30px;
+  }
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-light);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  overflow-y: auto;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+}
+
+/* Accessibility improvements */
+:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* Skip navigation for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #6366f1;
+  color: white;
+  padding: 8px;
+  z-index: 2000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Improved touch targets for mobile */
+@media (pointer: coarse) {
+  button, 
+  [role="button"],
+  .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

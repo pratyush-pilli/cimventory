@@ -1,0 +1,242 @@
+.document-upload-section {
+    margin: 20px 0;
+  
+    .upload-container {
+      margin-bottom: 20px;
+  
+      .file-input {
+        display: none;
+      }
+  
+      .upload-button {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: #f8faff;
+        border: 2px dashed #c5cae9;
+        position: relative;
+        overflow: hidden;
+        height: 120px;
+  
+        &:hover {
+          transform: translateY(-2px);
+          border-color: #1a237e;
+          background: #f5f7ff;
+        }
+  
+        &.has-file {
+          border-style: solid;
+          border-color: #1a237e;
+          background: #f0f3ff;
+  
+          .upload-icon {
+            color: #1a237e;
+          }
+  
+          .upload-text {
+            .main-text {
+              color: #1a237e;
+            }
+          }
+        }
+  
+        .upload-icon {
+          font-size: 36px;
+          color: #7986cb;
+          margin-right: 16px;
+          transition: all 0.3s ease;
+        }
+  
+        .upload-text {
+          flex: 1;
+  
+          .main-text {
+            font-weight: 600;
+            color: #3949ab;
+            font-size: 16px;
+            margin-bottom: 4px;
+          }
+  
+          .sub-text {
+            color: #7986cb;
+            font-size: 13px;
+          }
+  
+          .file-name {
+            margin-top: 8px;
+            font-size: 13px;
+            color: #1a237e;
+            background: rgba(26, 35, 126, 0.08);
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+  
+      .error-text {
+        color: #ff4444;
+        font-size: 12px;
+        margin-top: 4px;
+        text-align: center;
+      }
+    }
+  
+    // File type indicators
+    .file-type-indicator {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+      margin-right: 4px;
+      
+      &.pdf {
+        background: #fecaca;
+        color: #991b1b;
+      }
+      
+      &.image {
+        background: #bfdbfe;
+        color: #1e40af;
+      }
+    }
+  
+    // Loading state
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border: 2px solid #6366f1;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+    }
+  }
+  
+  @keyframes spin {
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .document-upload-section {
+      .upload-container {
+        .upload-button {
+          height: auto;
+          flex-direction: column;
+          text-align: center;
+          padding: 16px;
+  
+          .upload-icon {
+            margin: 0 0 12px 0;
+          }
+  
+          .upload-text {
+            text-align: center;
+  
+            .file-name {
+              width: 100%;
+              margin-top: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Animation for upload button
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  // Hover effects
+  .upload-button:hover .upload-icon {
+    animation: pulse 1s infinite;
+  }
+  
+  // Form field animations
+  .MuiTextField-root {
+    transition: transform 0.3s ease;
+  
+    &:focus-within {
+      transform: translateY(-2px);
+    }
+  }
+  
+  // Success state
+  .upload-success {
+    border-color: #4caf50 !important;
+    background: #f1f8e9 !important;
+  
+    .upload-icon {
+      color: #4caf50 !important;
+    }
+  }
+  
+  // Error state
+  .upload-error {
+    border-color: #f44336 !important;
+    background: #fef2f2 !important;
+  
+    .upload-icon {
+      color: #f44336 !important;
+    }
+  }
+  
+  // Dark mode support
+  @media (prefers-color-scheme: dark) {
+    .document-upload-section {
+      .upload-container {
+        .upload-button {
+          background: #1e293b;
+          border-color: #475569;
+  
+          &:hover {
+            border-color: #6366f1;
+            background: #1e293b;
+          }
+  
+          &.has-file {
+            background: rgba(99, 102, 241, 0.1);
+          }
+  
+          .upload-text {
+            .main-text {
+              color: #e2e8f0;
+            }
+  
+            .sub-text {
+              color: #94a3b8;
+            }
+          }
+        }
+      }
+    }
+  }
+  

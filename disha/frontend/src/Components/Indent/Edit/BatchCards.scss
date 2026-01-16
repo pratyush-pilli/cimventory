@@ -1,0 +1,38 @@
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.batch-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+
+  &.approved {
+    border-left: 4px solid #00c853; // Green for approved
+  }
+
+  &.pending {
+    border-left: 4px solid #ffa726; // Orange for pending
+  }
+
+  &.rejected {
+    border-left: 4px solid #ff5252; // Red for rejected
+  }
+
+  &.no-edit {
+    cursor: not-allowed;
+    opacity: 0.9;
+    
+    &:hover {
+      transform: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+} 

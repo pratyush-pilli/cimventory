@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Add your CSS styles here */
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .details {
+        margin-bottom: 20px;
+      }
+      .items-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .items-table th,
+      .items-table td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      .footer {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Billing Instructions</h1>
+      <h2>{{ document_number }}</h2>
+    </div>
+
+    <div class="details">
+      <p><strong>Date:</strong> {{ date }}</p>
+      <p><strong>Project Code:</strong> {{ project_code }}</p>
+      <p><strong>Project Name:</strong> {{ project_name }}</p>
+    </div>
+
+    <table class="items-table">
+      <thead>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Item No</th>
+          <th>Description</th>
+          <th>Make</th>
+          <th>Material Group</th>
+          <th>Location</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %} {% for location, quantity in
+        item.location_quantities.items %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ item.item_no }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.make }}</td>
+          <td>{{ item.material_group }}</td>
+          <td>{{ location }}</td>
+          <td>{{ quantity }}</td>
+        </tr>
+        {% endfor %} {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <p><strong>Total Items:</strong> {{ total_items }}</p>
+      <p><strong>Total Quantity:</strong> {{ total_quantity }}</p>
+      <p><strong>Remarks:</strong> {{ remarks }}</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+.po-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+
+  .po-card {
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    &.rejected {
+      border-left: 4px solid #f44336;
+    }
+
+    &.pending {
+      border-left: 4px solid #ff9800;
+    }
+
+    &.approved {
+      border-left: 4px solid #4caf50;
+    }
+  }
+}
