@@ -1,0 +1,111 @@
+// Variables
+$primary-color: #2196f3;
+$secondary-color: #7c4dff;
+$background-color: #f8f9fa;
+$text-primary: #2c3e50;
+$text-secondary: #546e7a;
+$border-radius: 12px;
+$box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+.outward-container {
+  padding: clamp(12px, 3vw, 24px);
+  max-width: 1400px;
+  margin: 0 auto;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .header-section {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: clamp(16px, 3vw, 24px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+
+    .table-container {
+      background: white;
+      border-radius: 16px;
+      padding: clamp(12px, 2vw, 20px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      
+      .MuiTableContainer-root {
+        flex: 1;
+        min-height: 0;
+        overflow: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .outward-container {
+    padding: 8px;
+    
+    .table-container {
+      padding: 8px;
+    }
+  }
+}
+
+.history-section {
+  margin-top: 2rem;
+  
+  .MuiPaper-root {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .MuiTableContainer-root {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .selectable-row {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    
+    &:hover {
+      background-color: rgba($primary-color, 0.04);
+    }
+    
+    &.Mui-selected {
+      background-color: rgba($primary-color, 0.08);
+      
+      &:hover {
+        background-color: rgba($primary-color, 0.12);
+      }
+    }
+  }
+  
+  .MuiCheckbox-root {
+    color: $primary-color;
+    
+    &.Mui-checked {
+      color: $primary-color;
+    }
+  }
+  
+  .MuiTableCell-paddingCheckbox {
+    width: 48px;
+    padding-left: 16px;
+  }
+  
+  .MuiChip-root {
+    font-size: 0.75rem;
+  }
+}

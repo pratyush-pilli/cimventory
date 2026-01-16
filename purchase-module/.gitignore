@@ -1,0 +1,174 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.coverage
+.tox/
+.nox/
+
+# Virtual environments
+env/
+venv/
+.venv/
+env_purchase/
+purchase_env/
+pur_env/
+myenv/
+ENV/
+env.bak/
+venv.bak/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static/
+local_settings.py
+
+# Node.js (React/Frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+build/
+dist/
+*.map
+.npm
+.yarn-integrity
+.pnp.*
+.yarn/
+
+# Environment files
+*.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.suo
+*.njsproj
+*.sln
+*.code-workspace
+
+# Operating Systems
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Logs and coverage
+*.log
+logs/
+coverage/
+*.cover
+*.coverage
+*.cov
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Cache directories
+.cache/
+.pip/
+.npm/
+.yarn/
+.parcel-cache/
+
+# Other
+*.iml
+*.bundle.js
+.sass-cache/
+.eslintcache
+.stylelintcache
+
+# Office files (temporary)
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Migration backups (keep actual migrations)
+*.sql.bak
+
+# Compiled output
+*.class
+*.jar
+*.war
+*.ear
+
+# Package files
+*.deb
+*.rpm
+
+# Unit test / coverage reports
+htmlcov/
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+disha/

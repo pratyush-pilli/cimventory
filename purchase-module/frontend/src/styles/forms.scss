@@ -1,0 +1,42 @@
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  
+  .MuiTextField-root {
+    margin-bottom: var(--spacing-md);
+    
+    .MuiOutlinedInput-root {
+      background: white;
+      border-radius: var(--radius-md);
+      
+      &:hover {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: var(--primary-400);
+        }
+      }
+      
+      &.Mui-focused {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: var(--primary-500);
+        }
+      }
+    }
+  }
+  
+  .MuiButton-root {
+    text-transform: none;
+    font-weight: 600;
+    padding: 8px 24px;
+    border-radius: var(--radius-md);
+    
+    &.MuiButton-contained {
+      background: var(--primary-500);
+      box-shadow: var(--shadow-sm);
+      
+      &:hover {
+        background: var(--primary-600);
+      }
+    }
+  }
+} 

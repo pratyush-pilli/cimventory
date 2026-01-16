@@ -1,0 +1,198 @@
+.po-edit {
+  padding: 24px;
+
+  .header-section {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 24px;
+
+    .title {
+      font-weight: 500;
+    }
+
+    .loading-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .po-cards {
+    margin-top: 20px;
+
+    .po-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      .po-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+
+        .po-number {
+          font-weight: 500;
+        }
+
+        .status-chip {
+          background-color: #ffebee;
+          color: #d32f2f;
+        }
+      }
+
+      .po-details {
+        margin-bottom: 16px;
+
+        .vendor-name, .project-code, .amount {
+          margin-bottom: 8px;
+        }
+      }
+
+      .rejection-details {
+        margin-bottom: 16px;
+        
+        .rejection-info {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: #666;
+          font-size: 0.9rem;
+          margin-bottom: 4px;
+        }
+      }
+
+      .rejection-remarks {
+        padding: 12px;
+        background-color: #fff3e0;
+        border-radius: 4px;
+        margin-bottom: 16px;
+
+        Typography {
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+        }
+      }
+
+      .card-actions {
+        margin-top: auto;
+        padding: 16px;
+      }
+    }
+  }
+
+  .po-info {
+    margin: 16px 0;
+    padding: 16px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+
+    Typography {
+      margin-bottom: 8px;
+    }
+  }
+
+  .MuiTableContainer-root {
+    margin-top: 16px;
+    
+    .MuiTableHead-root {
+      background-color: #f5f5f5;
+    }
+  }
+
+  .MuiAccordion-root {
+    margin-bottom: 16px;
+    
+    &:before {
+      display: none;
+    }
+    
+    .MuiAccordionSummary-root {
+      background-color: #f5f5f5;
+      
+      &:hover {
+        background-color: #eeeeee;
+      }
+      
+      .MuiTypography-h6 {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+    }
+    
+    .MuiAccordionDetails-root {
+      padding: 24px;
+    }
+  }
+
+  .MuiTextField-root {
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    margin-bottom: 16px;
+    color: #1976d2;
+    font-weight: 500;
+  }
+
+  .MuiDialog-paper {
+    .MuiDialogTitle-root {
+      border-bottom: 1px solid #e0e0e0;
+      background-color: #f5f5f5;
+    }
+
+    .MuiDialogContent-root {
+      padding: 24px;
+    }
+
+    .table-container {
+      margin-top: 24px;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .MuiTableCell-head {
+      background-color: #f5f5f5;
+      font-weight: 600;
+    }
+
+    .MuiTableCell-root {
+      padding: 8px 16px;
+    }
+  }
+
+  .delivery-address {
+    margin-top: 24px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .currency-selector {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .amount-in-words {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    font-style: italic;
+  }
+}

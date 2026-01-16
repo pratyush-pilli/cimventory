@@ -1,0 +1,191 @@
+# @api_view(['POST'])
+# def generate_po(request):
+#     try:
+#         data = request.data
+#         buffer = BytesIO()
+        
+#         # Extract PO details from the request
+#         po_details = data.get('poDetails', {})
+        
+#         # Extract supplier data from the nested structure
+#         supplier_data = data.get('supplier', {})
+#         # Extract materials from the items array
+#         materials = data.get('items', [])
+        
+#         # Create PDF with margins
+#         p = canvas.Canvas(buffer, pagesize=A4)
+#         width, height = A4
+        
+#         # Draw border around page
+#         p.rect(20, 20, width-40, height-40)
+        
+#         # Title - perfectly centered, outside tables
+#         p.setFont("Helvetica-Bold", 16)
+#         p.drawCentredString(width/2, height-40, "PURCHASE ORDER")
+        
+#         # Define styles
+#         style = TableStyle([
+#             ('GRID', (0, 0), (-1, -1), 1, colors.black),
+#             ('FONTNAME', (0, 0), (-1, -1), 'Helvetica'),
+#             ('FONTSIZE', (0, 0), (-1, -1), 8),
+#             ('TOPPADDING', (0, 0), (-1, -1), 2),
+#             ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+#             ('LEFTPADDING', (0, 0), (-1, -1), 3),
+#             ('RIGHTPADDING', (0, 0), (-1, -1), 3),
+#             ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+#         ])
+
+#         # Top section
+#         top_left_data = [
+#             ['Invoice To:'],
+#             ['CIMCON Software India Pvt. Ltd.'],
+#             ['1106/1117, 11th floor, Times Square Arcade-I,'],
+#             ['Opp. Rambaug, Nr. Baghbaan Party Plot Cross Road,'],
+#             ['Thaltej, Ahmedabad - 380059, Gujarat, India.'],
+#             ['GSTIN/UIN: 24AABCC1410E1ZL']
+#         ]
+        
+#         top_right_data = [
+#             ['PO Number', 'PO Date'],
+#             [po_details.get('poNumber', ''), po_details.get('poDate', '')],
+#             ['Quote Ref. Number', 'Project Code'],
+#             [po_details.get('quoteRefNumber', '-'), po_details.get('projectCode', '')],
+#             ['Dispatched Through', 'Freight & Insurance'],
+#             ['Transport', 'Extra']
+#         ]
+
+#         # Create and merge top tables
+#         top_data = [[
+#             Table(top_left_data, colWidths=[width/2-25]),
+#             Table(top_right_data, colWidths=[width/4-25]*2)
+#         ]]
+        
+#         top_table = Table(top_data, colWidths=[width/2-25, width/2-25])
+#         top_table.setStyle(style)
+        
+#         # Middle section (Consignee)
+#         middle_left_data = [
+#             ['Consignee (Ship To):'],
+#             ['CIMCON Software India Pvt. Ltd.'],
+#             ['802, Sakar IV, Opp. Townhall,'],
+#             ['Ellisbridge, Ashram Road'],
+#             ['Ahmedabad - 380006, Gujarat, India'],
+#             ['Mobile: 8758006007'],
+#             ['Kind Attn: Ashish Solanki']
+#         ]
+        
+#         middle_right_data = [
+#             ['Payment Terms'],
+#             ['100% Against Invoice'],
+#             [''],
+#             ['Warranty Terms'],
+#             ['1 year from date of invoice'],
+#             [''],
+#             ['']
+#         ]
+
+#         middle_data = [[
+#             Table(middle_left_data, colWidths=[width/2-25]),
+#             Table(middle_right_data, colWidths=[width/2-25])
+#         ]]
+        
+#         middle_table = Table(middle_data, colWidths=[width/2-25, width/2-25])
+#         middle_table.setStyle(style)
+        
+#         # Bottom section (Supplier)
+#         bottom_left_data = [
+#             ['Supplier (Bill From):'],
+#             [supplier_data.get('name', '')],
+#             [supplier_data.get('address', '')],
+#             [''],
+#             [f"Email: {supplier_data.get('email_1', supplier_data.get('email_2', ''))}"]
+#         ]
+        
+#         bottom_right_data = [
+#             ['Delivery Schedule'],
+#             ['1 week from date of Purchase order'],
+#             [''],
+#             [Table([['TPI Inspection', 'Installation & Comm.'],
+#                    ['Exclusive', 'Exclusive']], 
+#                   colWidths=[width/4-25]*2,
+#                   style=style)]
+#         ]
+
+#         bottom_data = [[
+#             Table(bottom_left_data, colWidths=[width/2-25]),
+#             Table(bottom_right_data, colWidths=[width/2-25])
+#         ]]
+        
+#         bottom_table = Table(bottom_data, colWidths=[width/2-25, width/2-25])
+#         bottom_table.setStyle(style)
+        
+#         # Items table with total
+#         items_data = [['Sr. No.', 'Description', 'Qty.', 'Price (INR)', 'Amount (INR)']]
+#         total_amount = 0
+        
+#         for item in materials:
+#             amount = float(item.get('qty', 0)) * float(item.get('price', 0))
+#             total_amount += amount
+#             items_data.append([
+#                 str(item.get('srNo', '')),
+#                 f"{item.get('description', '')}\nCPN: {item.get('cpn', '')}",
+#                 str(item.get('qty', '')),
+#                 str(item.get('price', '')),
+#                 f"{amount:.2f}"
+#             ])
+        
+#         # Add total row
+#         items_data.append(['', 'Total (INR)', '', '', f"{total_amount:.2f}"])
+        
+#         # Update items table style to handle total row
+#         items_style = TableStyle([
+#             ('GRID', (0, 0), (-1, -1), 1, colors.black),
+#             ('FONTNAME', (0, 0), (-1, -1), 'Helvetica'),
+#             ('FONTSIZE', (0, 0), (-1, -1), 8),
+#             ('ALIGN', (2, 0), (-1, -1), 'RIGHT'),
+#             ('ALIGN', (0, 0), (0, -1), 'CENTER'),
+#             ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+#             ('TOPPADDING', (0, 0), (-1, -1), 4),
+#             ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+#             ('LEFTPADDING', (0, 0), (-1, -1), 6),
+#             ('RIGHTPADDING', (0, 0), (-1, -1), 6),
+#             ('LEADING', (0, 0), (-1, -1), 12),
+#             ('WORDWRAP', (1, 0), (1, -1), True),
+#             # Style for total row
+#             ('FONTNAME', (-1, -1), (-1, -1), 'Helvetica-Bold'),  # Bold font for total amount
+#             ('ALIGN', (1, -1), (1, -1), 'RIGHT'),  # Right align "Total (INR)" text
+#         ])
+        
+#         # Adjust column widths to give more space to description
+#         items_table = Table(items_data, colWidths=[40, 280, 60, 80, 80])  # Increased width for description column
+#         items_table.setStyle(items_style)
+        
+#         # Draw all tables with adjusted spacing
+#         top_table.wrapOn(p, width, height)
+#         top_table.drawOn(p, 25, height-160)
+        
+#         middle_table.wrapOn(p, width, height)
+#         middle_table.drawOn(p, 25, height-290)
+        
+#         bottom_table.wrapOn(p, width, height)
+#         bottom_table.drawOn(p, 25, height-456)
+        
+#         items_table.wrapOn(p, width, height)
+#         items_table.drawOn(p, 27, height-570)
+        
+#         p.save()
+#         buffer.seek(0)
+        
+#         response = HttpResponse(content_type='application/pdf')
+#         response['Content-Disposition'] = 'attachment; filename="Purchase_Order.pdf"'
+#         response.write(buffer.getvalue())
+#         return response
+        
+#     except Exception as e:
+#         print("Error in generate_po:", str(e))
+#         import traceback
+#         print(traceback.format_exc())
+#         return HttpResponse(json.dumps({'error': str(e)}), 
+#                           content_type='application/json', 
+#                           status=500)
+

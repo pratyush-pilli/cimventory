@@ -1,0 +1,311 @@
+:root {
+  /* Color Variables with improved contrast */
+  --primary-color: #1e88e5; /* Better contrast than #2196f3 */
+  --secondary-color: #673ab7; /* Better contrast than #7c4dff */
+  --background-light: #f8fafc;
+  --text-primary: #212121; /* Darker for better contrast */
+  --text-secondary: #455a64; /* Improved from #546e7a */
+  --success-color: #2e7d32; /* Improved from #4caf50 */
+  --error-color: #d32f2f; /* Improved from #f44336 */
+  --warning-color: #ed6c02; /* Improved from #ff9800 */
+  --focus-color: #1e88e5;
+  
+  /* Spacing Variables */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  
+  /* Transitions */
+  --transition-quick: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-light);
+  color: var(--text-primary);
+  overflow-x: hidden; /* Changed from scroll to hidden */
+  line-height: 1.5;
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Improved scrollbar styling for better visibility and touch interaction */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #757575; /* Darker for better contrast */
+  border-radius: 6px;
+  border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #616161; /* Even darker on hover */
+}
+
+/* Improved typography with responsive sizes */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h4 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
+h5 { font-size: clamp(1rem, 1.5vw, 1.25rem); }
+h6 { font-size: clamp(0.875rem, 1vw, 1rem); }
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+  max-width: 70ch; /* Limit line length for better readability */
+}
+
+/* Improved link styling with better accessibility */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition-quick);
+  position: relative;
+}
+
+a:hover {
+  color: #1565c0; /* Darker shade for hover */
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--focus-color);
+  outline-offset: 2px;
+  text-decoration: underline;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(33, 150, 243, 0.2);
+  color: var(--primary-color);
+}
+
+/* Container widths with improved responsive behavior */
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Improved responsive typography and spacing */
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    max-width: 960px;
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    max-width: 720px;
+    padding: 0 var(--spacing-sm);
+  }
+  
+  p {
+    max-width: 60ch;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 13px;
+  }
+  
+  .container {
+    max-width: 540px;
+    padding: 0 var(--spacing-xs);
+  }
+  
+  p {
+    max-width: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    font-size: 12pt;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  a {
+    text-decoration: underline;
+    color: #000;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* High contrast mode improvements */
+@media (prefers-contrast: more) {
+  :root {
+    --primary-color: #0056b3;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --background-light: #ffffff;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  button, .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Improved focus styles for keyboard navigation */
+:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* Skip-links for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  z-index: 9999;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Touch device optimizations */
+@media (pointer: coarse) {
+  button, 
+  [role="button"],
+  a,
+  input[type="checkbox"],
+  input[type="radio"],
+  .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  input, select, textarea {
+    font-size: 16px; /* Prevent auto-zoom on iOS */
+  }
+}
+
+/* Font consistency */
+* {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Fix for iOS input radius bug */
+input, select, textarea {
+  -webkit-appearance: none;
+  border-radius: var(--border-radius-sm);
+  font-family: inherit;
+}
+
+/* Add this to index.css to ensure tables have enough space */
+.main-content {
+  padding: 20px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+}
+
+/* Remove any fixed heights that might constrain tables */
+.container, .paper {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure DataGrid components are properly sized */
+.MuiDataGrid-root {
+  height: calc(100vh - 220px) !important;
+  width: 100% !important;
+  border-color: transparent !important;
+}

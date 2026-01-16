@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Delivery Challan</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>{{ company_name }}</h1>
+      <p>{{ company_address }}</p>
+      <h2>Delivery Challan</h2>
+      <h3>{{ document_number }}</h3>
+    </div>
+
+    <div class="document-info">
+      <table width="100%">
+        <tr>
+          <td><strong>Date:</strong> {{ date }}</td>
+          <td><strong>Project Code:</strong> {{ project_code }}</td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>Project Name:</strong> {{ project_name }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <table class="items-table">
+      <thead>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Item No</th>
+          <th>Description</th>
+          <th>Make</th>
+          <th>Location</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %} {% for location in item.locations %}
+        <tr>
+          <td>{{ item.sr_no }}</td>
+          <td>{{ item.item_no }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.make }}</td>
+          <td>{{ location.name }}</td>
+          <td>{{ location.quantity }}</td>
+        </tr>
+        {% endfor %} {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <p><strong>Total Items:</strong> {{ total_items }}</p>
+      <p><strong>Total Quantity:</strong> {{ total_quantity }}</p>
+      {% if remarks %}
+      <p><strong>Remarks:</strong> {{ remarks }}</p>
+      {% endif %}
+    </div>
+
+    <div class="signatures">
+      <div class="signature-box">
+        <div class="signature-line"></div>
+        <p>Authorized Signatory</p>
+      </div>
+      <div class="signature-box">
+        <div class="signature-line"></div>
+        <p>Received By</p>
+      </div>
+    </div>
+  </body>
+</html>
