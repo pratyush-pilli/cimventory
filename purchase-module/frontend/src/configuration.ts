@@ -1,7 +1,7 @@
 // src/config.ts
 
 const config = {
-  api_url: "http://199.199.50.190:8001/", // Backend running on 199.199.50.128:8000
+  api_url: "http://199.199.51.181:8000/", // Backend running on 199.199.50.128:8000
 };
 
 // Create a clean axios instance specifically for API calls

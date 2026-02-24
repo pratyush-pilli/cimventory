@@ -96,6 +96,7 @@ def save_po(request):
     try:
         data = request.data
         items = data.get('items', [])
+        po_type = data.get('po_type', 'domestic')
         
         # Create the PurchaseOrder record
         po = PurchaseOrder.objects.create(
@@ -103,6 +104,7 @@ def save_po(request):
             po_date=data.get('po_date', timezone.now().date()),
             quote_ref_number=data.get('quote_ref_number', ''),
             project_code=data.get('project_code', ''),
+            po_type=po_type,
             vendor_name=data.get('vendor_name', 'na'),
             vendor_address=data.get('vendor_address', 'na'),
             vendor_email=data.get('vendor_email', 'na'),
@@ -181,6 +183,7 @@ def save_po(request):
             'message': 'PO created successfully',
             'po_id': po.id,
             'po_number': po.po_number,
+            'po_type': po.po_type,
             'updated_items': items  # Include the items in response
         })
 
@@ -300,6 +303,7 @@ def get_project_codes_with_po_details(request):
                 'po_date': po.po_date,
                 'quote_ref_number': po.quote_ref_number,
                 'project_code': po.project_code,
+                'po_type': getattr(po, 'po_type', 'domestic'),
                 
                 # Vendor Details
                 'vendor_name': po.vendor_name,
@@ -460,6 +464,7 @@ def get_pending_pos(request):
                 'po_date': po.po_date,
                 'quote_ref_number': po.quote_ref_number,
                 'project_code': po.project_code,
+                'po_type': getattr(po, 'po_type', 'domestic'),
                 
                 # Vendor Details
                 'vendor_name': po.vendor_name,

@@ -213,6 +213,30 @@ const POEditDialog: React.FC<POEditDialogProps> = ({
           <Typography variant="h5" align="center" sx={{ fontWeight: "bold" }}>
             PURCHASE ORDER
           </Typography>
+          <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
+            <Chip
+              label={
+                ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                "overseas"
+                  ? "Overseas"
+                  : "Domestic"
+              }
+              size="small"
+              sx={{
+                backgroundColor:
+                  ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                  "overseas"
+                    ? "#fff7ed"
+                    : "#eff6ff",
+                color:
+                  ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                  "overseas"
+                    ? "#9a3412"
+                    : "#1d4ed8",
+                fontWeight: 600,
+              }}
+            />
+          </Box>
         </DialogTitle>
         <DialogContent sx={{ p: 2 }}>
           <Box sx={{ border: "1px solid #000", p: 2 }}>

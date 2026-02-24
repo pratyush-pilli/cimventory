@@ -73,6 +73,7 @@ interface PurchaseOrder {
   total_amount: number;
   project_code: string;
   status: string;
+  po_type?: "domestic" | "overseas";
   rejection_remarks: string;
   rejected_by: string;
   rejection_date: string;
@@ -723,6 +724,28 @@ const POEdit: React.FC = () => {
                       {po.po_number}
                     </Typography>
                     <Chip
+                      label={
+                        ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                        "overseas"
+                          ? "Overseas"
+                          : "Domestic"
+                      }
+                      size="small"
+                      sx={{
+                        backgroundColor:
+                          ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                          "overseas"
+                            ? "#fff7ed"
+                            : "#eff6ff",
+                        color:
+                          ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                          "overseas"
+                            ? "#9a3412"
+                            : "#1d4ed8",
+                        fontWeight: 600,
+                      }}
+                    />
+                    <Chip
                       label={activeTab === 'rejected' ? 'Rejected' : `Approved v${Number(po.version || 1).toFixed(1)}`}
                       color={activeTab === 'rejected' ? 'error' : 'success'}
                       size="small"
@@ -798,6 +821,30 @@ const POEdit: React.FC = () => {
             <Typography variant="h5" align="center" sx={{ fontWeight: "bold" }}>
               PURCHASE ORDER
             </Typography>
+            <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
+              <Chip
+                label={
+                  ((selectedPO as any)?.po_type || (selectedPO as any)?.poType || "domestic") ===
+                  "overseas"
+                    ? "Overseas"
+                    : "Domestic"
+                }
+                size="small"
+                sx={{
+                  backgroundColor:
+                    ((selectedPO as any)?.po_type || (selectedPO as any)?.poType || "domestic") ===
+                    "overseas"
+                      ? "#fff7ed"
+                      : "#eff6ff",
+                  color:
+                    ((selectedPO as any)?.po_type || (selectedPO as any)?.poType || "domestic") ===
+                    "overseas"
+                      ? "#9a3412"
+                      : "#1d4ed8",
+                  fontWeight: 600,
+                }}
+              />
+            </Box>
           </DialogTitle>
           <DialogContent sx={{ p: 2 }}>
           {selectedPO && (selectedPO.status === 'approved' || selectedPO.approval_status) && (

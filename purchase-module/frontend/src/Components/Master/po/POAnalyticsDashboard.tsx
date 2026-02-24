@@ -84,6 +84,7 @@ interface PurchaseOrderData {
   approval_date: string | null;
   created_at: string;
   line_items: any[];
+  po_type?: "domestic" | "overseas";
 }
 
 interface AnalyticsData {
@@ -204,6 +205,16 @@ const POAnalyticsDashboard: React.FC = () => {
       // Calculate analytics
       const analytics = calculateAnalytics(filteredPOs);
       setAnalyticsData(analytics);
+
+      // Add PO type counts to analytics data for display
+      const domesticCount = filteredPOs.filter(
+        (po: any) => (po?.po_type || po?.poType || "domestic") !== "overseas"
+      ).length;
+      const overseasCount = filteredPOs.filter(
+        (po: any) => (po?.po_type || po?.poType || "domestic") === "overseas"
+      ).length;
+      (analytics as any).domesticCount = domesticCount;
+      (analytics as any).overseasCount = overseasCount;
 
     } catch (error) {
       console.error("Error fetching analytics data:", error);
@@ -445,6 +456,18 @@ const POAnalyticsDashboard: React.FC = () => {
           <Typography variant="body1" color="text.secondary">
             Comprehensive insights and performance metrics
           </Typography>
+          <Stack direction="row" spacing={1} sx={{ mt: 1, flexWrap: "wrap" }}>
+            <Chip
+              label={`Domestic: ${(analyticsData as any).domesticCount ?? 0}`}
+              size="small"
+              sx={{ backgroundColor: "#eff6ff", color: "#1d4ed8", fontWeight: 600 }}
+            />
+            <Chip
+              label={`Overseas: ${(analyticsData as any).overseasCount ?? 0}`}
+              size="small"
+              sx={{ backgroundColor: "#fff7ed", color: "#9a3412", fontWeight: 600 }}
+            />
+          </Stack>
         </Box>
         <Stack direction="row" spacing={2} alignItems="center">
           <FormControl size="small" sx={{ minWidth: 140 }}>

@@ -82,6 +82,7 @@ interface PurchaseOrder {
   quote_ref_number: string | null;
   project_code: string;
   version?: number;
+  po_type?: "domestic" | "overseas";
 
   // Vendor Details
   vendor_name: string;
@@ -465,6 +466,28 @@ const POApproval: React.FC = () => {
                     <Typography variant="h6" component="span">
                       {po.po_number}
                     </Typography>
+                    <Chip
+                      label={
+                        ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                          "overseas"
+                          ? "Overseas"
+                          : "Domestic"
+                      }
+                      size="small"
+                      sx={{
+                        backgroundColor:
+                          ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                          "overseas"
+                            ? "#fff7ed"
+                            : "#eff6ff",
+                        color:
+                          ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                          "overseas"
+                            ? "#9a3412"
+                            : "#1d4ed8",
+                        fontWeight: 600,
+                      }}
+                    />
                     <Chip
                       label="Pending Approval"
                       color="warning"

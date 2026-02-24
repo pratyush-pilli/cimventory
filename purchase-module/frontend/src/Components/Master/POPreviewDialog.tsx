@@ -43,6 +43,8 @@ interface POPreviewDialogProps {
   onGenerate: (poData: any, documentUrl: string) => void;
 }
 
+type POType = "domestic" | "overseas";
+
 interface Currency {
   code: string;
   symbol: string;
@@ -135,6 +137,8 @@ const POPreviewDialog: React.FC<POPreviewDialogProps> = ({
     code: "INR",
     symbol: "₹",
   });
+
+  const [poType, setPoType] = useState<POType>("domestic");
 
   const currencies: Currency[] = [
     { code: "INR", symbol: "₹" },
@@ -275,6 +279,8 @@ const POPreviewDialog: React.FC<POPreviewDialogProps> = ({
     if (open) {
       fetchVendors();
       fetchLatestPONumber();
+
+      setPoType("domestic");
 
       // Get unique project codes and quote ref numbers from selected items
       const uniqueProjectCodes = [
@@ -616,6 +622,7 @@ const POPreviewDialog: React.FC<POPreviewDialogProps> = ({
 
       // Create the payload
       const poGenerationPayload = {
+        po_type: poType,
         poDetails: {
           poNumber: poData.poDetails.poNumber,
           poDate: poData.poDetails.poDate,
@@ -623,6 +630,7 @@ const POPreviewDialog: React.FC<POPreviewDialogProps> = ({
           quoteRefNumber: poData.poDetails.quoteRefNumber,
           projectCode: poData.poDetails.projectCode,
           vendorCode: poData.poDetails.vendorCode,
+          orderType: selectedRows?.[0]?.order_type || "",
           supplier: poData.supplier,
           invoiceTo: poData.invoiceTo,
           consignee: {
@@ -667,6 +675,7 @@ const POPreviewDialog: React.FC<POPreviewDialogProps> = ({
         terms_and_conditions: termsToUse,
       };
       const savePOPayload = {
+        po_type: poType,
         po_number: poData.poDetails.poNumber,
         po_date: poData.poDetails.poDate,
         quote_ref_number: poData.poDetails.quoteRefNumber || "",
@@ -768,7 +777,7 @@ const POPreviewDialog: React.FC<POPreviewDialogProps> = ({
       const downloadUrl = window.URL.createObjectURL(pdfBlob);
       const link = document.createElement("a");
       link.href = downloadUrl;
-      link.download = `${poData.poDetails.poNumber}.pdf`;
+      link.download = `${poData.poDetails.poNumber}_${poType === "overseas" ? "Overseas" : "Domestic"}.pdf`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -862,7 +871,9 @@ const POPreviewDialog: React.FC<POPreviewDialogProps> = ({
 
   const fetchOriginalTerms = async () => {
     try {
-      const response = await axios.get(`${configuration.api_url}/terms-conds/`);
+      const response = await axios.get(
+        `${configuration.api_url}/terms-conds/?po_type=${poType}`
+      );
       return response.data; // Assuming the T&C is returned as plain text
     } catch (error) {
       console.error("Error fetching original T&C:", error);
@@ -1516,6 +1527,25 @@ const POPreviewDialog: React.FC<POPreviewDialogProps> = ({
                         Project Code
                       </TableCell>
                       <TableCell>{poData.poDetails.projectCode}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell sx={{ fontWeight: "bold" }}>PO Type</TableCell>
+                      <TableCell>
+                        <Select
+                          value={poType}
+                          onChange={(e) => setPoType(e.target.value as POType)}
+                          size="small"
+                          fullWidth
+                          sx={selectStyles.select}
+                        >
+                          <MenuItem value="domestic" sx={selectStyles.menuItem}>
+                            Domestic
+                          </MenuItem>
+                          <MenuItem value="overseas" sx={selectStyles.menuItem}>
+                            Overseas
+                          </MenuItem>
+                        </Select>
+                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell sx={{ fontWeight: "bold" }}>

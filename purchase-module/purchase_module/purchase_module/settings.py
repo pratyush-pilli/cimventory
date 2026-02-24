@@ -181,7 +181,7 @@ DATABASES = {
         'NAME': 'purchase',
         'USER': 'pratyush',
         'PASSWORD': 'pratyush',
-        'HOST': '199.199.50.190',
+        'HOST': '199.199.51.181',
         
         # 'HOST': 'host.docker.internal',
         'PORT': '5432',

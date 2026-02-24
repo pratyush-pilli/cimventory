@@ -371,6 +371,9 @@ const POPreviewPrint = () => {
             <Typography variant="h6" sx={{ fontWeight: "bold" }}>
               PURCHASE ORDER
             </Typography>
+            <Typography variant="body2" sx={{ fontWeight: 600, mt: 0.25 }}>
+              PO Type: {((poData as any)?.po_type || (poData as any)?.poType || "domestic") === "overseas" ? "Overseas" : "Domestic"}
+            </Typography>
           </Box>
 
           {/* Main content grid */}

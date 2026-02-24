@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, Typography, Box, Paper } from "@mui/material";
+import { Card, CardContent, Typography, Box, Paper, Chip } from "@mui/material";
 import "./POCards.scss";
 
 interface POLineItem {
@@ -19,6 +19,7 @@ interface PurchaseOrder {
   total_amount: number;
   project_code: string;
   status: string;
+  po_type?: "domestic" | "overseas";
   rejection_remarks?: string;
   line_items: POLineItem[];
 }
@@ -60,6 +61,28 @@ const POCards: React.FC<POCardsProps> = ({ purchaseOrders, onCardClick }) => {
               >
                 {po.status}
               </Typography>
+              <Chip
+                label={
+                  ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                  "overseas"
+                    ? "Overseas"
+                    : "Domestic"
+                }
+                size="small"
+                sx={{
+                  backgroundColor:
+                    ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                    "overseas"
+                      ? "#fff7ed"
+                      : "#eff6ff",
+                  color:
+                    ((po as any)?.po_type || (po as any)?.poType || "domestic") ===
+                    "overseas"
+                      ? "#9a3412"
+                      : "#1d4ed8",
+                  fontWeight: 600,
+                }}
+              />
             </Box>
 
             <Typography color="text.secondary" sx={{ mt: 1 }}>

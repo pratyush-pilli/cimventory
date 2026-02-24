@@ -77,6 +77,7 @@ type POStatus =
 type SortField =
   | "po_number"
   | "po_date"
+  | "po_type"
   | "vendor_name"
   | "total_amount"
   | "inward_status"
@@ -104,6 +105,7 @@ interface PurchaseOrderData {
   po_date: string;
   quote_ref_number: string | null;
   project_code: string;
+  po_type?: "domestic" | "overseas";
   vendor_name: string;
   vendor_address: string;
   vendor_email: string | null;
@@ -860,6 +862,16 @@ const POFilter: React.FC = () => {
               </TableCell>
               <TableCell>
                 <TableSortLabel
+                  active={sortField === "po_type"}
+                  direction={sortField === "po_type" ? sortDirection : "asc"}
+                  onClick={() => handleSort("po_type")}
+                  sx={{ fontWeight: 600 }}
+                >
+                  PO Type
+                </TableSortLabel>
+              </TableCell>
+              <TableCell>
+                <TableSortLabel
                   active={sortField === "vendor_name"}
                   direction={
                     sortField === "vendor_name" ? sortDirection : "asc"
@@ -907,7 +919,7 @@ const POFilter: React.FC = () => {
               // Loading skeleton
               Array.from({ length: pageSize }).map((_, index) => (
                 <TableRow key={index}>
-                  {Array.from({ length: 7 }).map((_, cellIndex) => (
+                  {Array.from({ length: 8 }).map((_, cellIndex) => (
                     <TableCell key={cellIndex}>
                       <Skeleton variant="text" width="100%" />
                     </TableCell>
@@ -916,7 +928,7 @@ const POFilter: React.FC = () => {
               ))
             ) : paginatedData.results.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={7} align="center" sx={{ py: 4 }}>
+                <TableCell colSpan={8} align="center" sx={{ py: 4 }}>
                   <Typography color="text.secondary">
                     No purchase orders found matching your criteria.
                   </Typography>
@@ -939,6 +951,27 @@ const POFilter: React.FC = () => {
                     </TableCell>
                     <TableCell>
                       {dayjs(po.po_date).format("DD/MM/YYYY")}
+                    </TableCell>
+                    <TableCell>
+                      <Chip
+                        label={
+                          (po.po_type || "domestic") === "overseas"
+                            ? "Overseas"
+                            : "Domestic"
+                        }
+                        size="small"
+                        sx={{
+                          backgroundColor:
+                            (po.po_type || "domestic") === "overseas"
+                              ? "#fff7ed"
+                              : "#eff6ff",
+                          color:
+                            (po.po_type || "domestic") === "overseas"
+                              ? "#9a3412"
+                              : "#1d4ed8",
+                          fontWeight: 600,
+                        }}
+                      />
                     </TableCell>
                     <TableCell>{po.vendor_name}</TableCell>
                     <TableCell>{po.project_code}</TableCell>
@@ -999,7 +1032,7 @@ const POFilter: React.FC = () => {
 
                   {/* Expanded Row */}
                   <TableRow>
-                    <TableCell colSpan={7} sx={{ p: 0, border: 0 }}>
+                    <TableCell colSpan={8} sx={{ p: 0, border: 0 }}>
                       <Collapse
                         in={expandedRow === index}
                         timeout="auto"
@@ -2079,7 +2112,7 @@ const POFilter: React.FC = () => {
           </TableBody>
           <TableFooter>
             <TableRow>
-              <TableCell colSpan={7}>
+              <TableCell colSpan={8}>
                 <Box
                   sx={{
                     display: "flex",

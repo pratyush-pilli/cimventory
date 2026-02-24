@@ -397,6 +397,9 @@ const RequisitionVerification = () => {
     setLoading(true);
     setApiLoading(true);
     try {
+      // Clear previous project data immediately to avoid showing stale items
+      setGroupedRequisitions({});
+      setRequisitionDetails(null);
       const [reqResponse, historyResponse] = await Promise.all([
         axios.get(
           `${configuration.api_url}requisitions/?project_code=${projectCode}`
@@ -406,7 +409,13 @@ const RequisitionVerification = () => {
         ),
       ]);
 
-      const requisitionsWithStock = reqResponse.data.map(
+      // Defensive filter: ensure UI only shows the selected project's requisitions
+      // (protects against backend returning mixed data)
+      const projectRequisitions = (reqResponse.data || []).filter(
+        (item: RequisitionItem) => item?.project_code === projectCode
+      );
+
+      const requisitionsWithStock = projectRequisitions.map(
         (item: RequisitionItem) => ({
           ...item,
           soh: inventoryData[item.cimcon_part_number] || 0,
@@ -422,7 +431,7 @@ const RequisitionVerification = () => {
 
       setGroupedRequisitions(grouped);
       setRequisitionDetails({
-        ...reqResponse.data[0],
+        ...(projectRequisitions[0] || {}),
         items: requisitionsWithStock,
       });
       setApprovalHistory(historyResponse.data);
@@ -698,9 +707,7 @@ const RequisitionVerification = () => {
   ) => {
     setSelectedProject(project?.project_code || null);
     setSelectedProjectDetails(project);
-    if (project) {
-      await fetchRequisitionDetails(project.project_code);
-    }
+    // Data fetching is handled by the selectedProject effect
   };
 
   const fetchLocationStockDetails = async (partNumber: string) => {

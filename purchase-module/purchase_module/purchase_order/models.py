@@ -28,12 +28,22 @@ class PurchaseOrder(models.Model):
         ('on_hold', 'On Hold')
     ]
 
+    PO_TYPE_CHOICES = [
+        ('domestic', 'Domestic'),
+        ('overseas', 'Overseas'),
+    ]
+
     # PO Details
     po_number = models.CharField(max_length=100, unique=True)
     po_date = models.DateField(default=timezone.now)
     quote_ref_number = models.CharField(max_length=100, blank=True, null=True)
     project_code = models.CharField(max_length=100, blank=True, null=True)
     version = models.DecimalField(max_digits=3, decimal_places=1, default=1.0)
+    po_type = models.CharField(
+        max_length=20,
+        choices=PO_TYPE_CHOICES,
+        default='domestic',
+    )
 
     # Vendor Details
     vendor_name = models.CharField(max_length=200)

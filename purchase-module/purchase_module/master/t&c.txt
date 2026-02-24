@@ -1,37 +1,346 @@
-1.  PO ACCEPTANCE: Acceptance of the purchase order shall be given by the Supplier in writing within 3 days of receipt of this purchase order failing which the Supplier will be deemed to have accepted the order at the stated terms & conditions.
-2.  PRICE / RATE: The prices/rates are FIRM and without any escalation, whatsoever. The rates mentioned in the Purchase Order shall remain valid till the satisfactory completion of the agreed scope of supply.
-3.  APPLICABLE TAXES: GST Extra at Actual
-4.  PACKING / FORWARDING: Goods supplied against this purchase order shall be properly packed in line with best industry practices to ensure safe transport by SEA / AIR / SURFACE / RAIL to the place stipulated in this order. No charges shall be paid for packing. Material shall be packed carefully to prevent damage during transit. Prices are inclusive of Packing & Forwarding.
-5.  LABELS / MARKING: Each product's details with serial number with QR Code shall be mentioned on every product and box. Any special mark/embossed required for the particular project shall be confirmed with the buyer before manufacturing starts (In that case printed labels shall not be acceptable). All labels/markings should be designed as per the approved QAP.
-6.  WARRANTY: Any complaint reported within the warranty period will be addressed and resolved within 24 hours from the time of complaint was raised. Any remote online support will be provided within 24 hours for calibration, testing, site installation, and commissioning as required. Any part found defective during this period, as a consequence of bad design, manufacturing, or workmanship should be replaced, free of cost, by you. In case you fail to carry out repairs/replacements, we shall carry out the same at your risk & cost. The repaired/replaced part shall be repaired/replaced free of cost at the site. The acceptance of material at the site does not relieve the vendor of his obligation under this clause. The spares and service costs shall be at actual after the warranty period.
-7.  INSPECTION OF GOODS: The material shall be Inspected by the TPI agencies (Assigned by CIMCON / End Customer) and the TPI inspection report along with the release note shall be submitted to the buyer for dispatch clearance. The expense for the TPI inspections shall be borne by the supplier (If agreed during order finalization). The Supplier shall raise a formal Inspection call in Buyer’s format at least 5 days in advance. The Buyer reserves the right for Inspection of goods at the point of assembly and/or delivery. If the goods manufactured do not follow the approved drawings and specifications and as per the purchase order, the Buyer reserves the right to reject the goods in whole or in part. In such an event the Buyer shall be free to buy the goods from any other source and the Supplier shall be liable to reimburse the Buyer of any additional cost incurred in doing so and refunding all the payments that have been made for the rejected material.
-8.  LIQUATED DAMAGES: In case the supplier fails to deliver the goods within the agreed days, the purchaser may deduct liquidated damages @ 0.1% of the invoice value for every day of delay for an unexecuted portion of the supply. The maximum limit of such deduction will be 10% of the contract price. Such penalty shall be recovered from the balance/s payable to Supplier or shall be adjusted against security instruments if so available with Purchaser. 
-9.  FORCE MAJEURE: The Supplier shall be under no liability for failure to deliver and the Buyer for failure to accept delivery of goods or any part thereof when such failure is due to natural events such as fire, earthquakes, floods, strikes, lock-outs, transportation, embargoes, act of God, State enemies, or any other causes whatsoever beyond the control of the Supplier or Buyer.
-10. EXCESS SUPPLIES: Material must not be more than quantity ordered. The Buyer assumes no obligation concerning such excess quantity. The Supplier must remove such excess supplies at his own risk and cost.
-11. INDEMNITY: CIMCON and its associated companies, subsidiaries, and its Directors, personnel, officers, and employees shall be indemnified and held harmless by the supplier for and against any liabilities, losses, damages, claims, costs and expenses, interest and penalties (including without limitation, attorney fees and expenses) suffered or incurred by CIMCON arising out of resulting from the breach of any representation, warranty, covenant or obligation made by the supplier in the PO. 
-12. ACCEPTANCE OF GOODS: Acceptance of any of the goods shall not discharge the Supplier from liability for other legal remedy for any breach of any condition or warranty contained herein or implied by law and if after accepting the goods or any of them any defects therein either in material, workmanship or otherwise become known to the Buyer and such defects amount to a breach of any condition or warranty hereunder or implied by law, the Buyer shall forthwith notify the Supplier of such defects and shall (in addition to any other rights or remedies that the Buyer may possess) be entitled to reject the defective goods and hold the same at the Suppliers risk. The Supplier shall be responsible and be liable to replace or to repair at the option of the Buyer, free of cost, goods supplied under this order or any part thereof if any defect in the composition or substance material workmanship or process of manufacture or the design of the goods is brought to the notice of the Supplier within 24 calendar months from the date of delivery.
-13. REMOVAL OR REJECTED GOODS: The Supplier shall remove the rejected goods from the Buyer’s warehouse or site at his / their own cost within 15 days from the date of intimation from the Buyer of their refusal to accept the goods. The Buyer shall not be responsible for or be held liable for any loss or deterioration of the rejected goods. The Supplier shall pay to Buyer reasonable storage charges for such rejected goods for the period exceeding 15 days as aforesaid.
-14. DISPATCH INSTRUCTIONS: Buyer shall issue Dispatch Instructions (DI) to Supplier after successful inspection/testing and on receipt of formal dispatch clearance from the end client upon submitting the TPI inspection report and the release note. Supplier shall prepare and submit the dispatch documents strictly following DI. The Supplier shall dispatch the material only after getting written dispatch clearance along with DI from the Buyer. The material shall be delivered to the address mentioned in the DI.
-15. INSTALLATION: The installation and commissioning are in the scope of the supplier (If agreed during order finalization). The buyer is not responsible for any materials/manpower/logistics for installation. The installation and commissioning shall be completed within a week after giving the clearance from the site (Client). Once installation and commissioning are completed the supplier shall sign a User Acceptance Document (UAD) between the supplier and the buyer to hand over the site.
-16. QUALITY: The material shall be manufactured strictly as per approved drawings and Guaranteed Technical Particulars (GTPs) and correspond with the description or the sample or the original specifications thereof in all details. Otherwise, the same shall be liable to be rejected by the Buyer and the Supplier shall be deemed to have delivered the wrong goods according to the contract. The Buyer’s decision in the matter of Quality will be final and binding. Besides the Supplier shall be liable for the “Latent Defects” & shall stand a guarantee for the replacement of any parts/materials/services for a further period as per tender from the end of the guarantee period. Spares and service costs after the Defective Liability Period (warranty Period) to be provided.
-17. CANCELLATION / AMENDMENT: The Buyer reserves the right to cancel or amend this order or any part thereof without assigning any reason.
-18. CONFIDENTIALITY: Supplier shall maintain strict confidentiality in respect of the information gathered from CIMCON and the contract. In case it becomes necessary to disclose such information to any third party, then written confirmation shall be obtained by the supplier from CIMCON. Suppliers cannot claim CIMCON as customers in any media or verbal. Suppliers do not get marketing rights for CIMCON products. There should not be any Chinese language in any product, module, PCB, label, manual, box, or package. CIMCON will provide the design of customized labels. The Supplier agrees that he/they will not use, sell, loan, or publicize any of the specifications, blueprints, or designs, supplied or paid for by the Buyer for fulfillment of this order without prior written consent from the Buyer.
-19. DISPUTE RESOLUTION: Any dispute and claims between the Parties to the Agreement arising out of or incidental thereto or in connection with the Agreement, or the breach, or Invalidity thereof, or its performance shall be referred to the Director of CIMCON, and decision of Director of CIMCON shall be final and binding. No Arbitration is allowed under this agreement.
-20. JURISDICTION OF COURTS: The Law Courts at Ahmedabad shall have exclusive jurisdiction in the matter arising under this agreement.
-21. COMPLETENESS: Supplier confirms that the complete requirements as contained in the Drawings / Specifications / Clarifications submitted are understood and all items of the Project whether specifically mentioned or not in Technical Specification, are necessary for completeness, and for safe and efficient operation, maintenance and guaranteed performance shall be supplied by the Supplier at no extra cost.
-22. COMPLIANCE: Goods and services shall conform to the requirements of the contract and shall be fit for purpose. They shall be made or performed following good engineering practices and all applicable standards and legislation. Goods shall be delivered complete with all instructions, warnings, and other data necessary for safe and proper operation. Goods or services which do not comply with all of the above shall be considered to be defective. If for any reason the Supplier is uncertain as to whether the goods or services to be supplied by it will comply with any of the above, it must promptly and before dispatch inform the Buyer in writing with full details of the possible non-compliance for consideration. Written acceptance or rejection of the Supplier’s application will then be provided by the Buyer in as timely a manner as possible.
-23. MANUFACTURING CLEARANCE: The Supplier shall start the manufacturing of material only after getting a written Manufacturing Clearance (MC) from the Buyer after successful validation of the samples and satisfactory feedback from the manufacturing factory visit. If the supplier starts the manufacturing without the buyer's written clearance, the buyer shall not be responsible for any loss due to the cancellation of the order. The quantity cleared in MC shall only be manufactured by the Supplier. Any material manufactured without getting the MC from the Buyer shall be rejected.
-24. QUANTITY VARIATION: The Buyer reserves the right to change the quantity during the execution of the contract. The unit prices mentioned in the purchase order shall be applicable for change in quantity variation as per site required overall for additional / deletion quantity during the tenancy of the contract.
-25. ANTI-CORRUPTION POLICY: The purchaser has zero tolerance concerning corruption in any shape. Suppliers are advised to adhere in total and do nothing of the sort which could lead to the tarnishing of their image, blacklisting of the Seller including forfeiting of payable dues. Influencing employees for any kind of favor through un-ethical means shall not be tolerated by the management of CIMCON
-26. CHECKLIST FOR SUBMISSION OF INVOICES ALONG WITH DOCUMENTATION AFTER DISPATCH OF MATERIALS
-    i.	TPI Inspection reports and release note
-    ii.	Serial number list of all items
-    iii.	Packing list identifying contents of each shipment
-    iv.	Evidence of dispatch (LR Copy)
-    v.	E-way Bill
-    vi.	E-Invoice with Digital Signature
-    vii.	Dispatch Instruction issued by CIMCON
-    viii.	Manufacturer’s/Contractor’s guarantee certificate of Quality
-    ix.	Material Test certificate
-for, CIMCON Software India Pvt Ltd. (24-25)
+1. LABELS / MARKING
 
+Each product's details with serial number with QR Code shall be mentioned on every product and
+box. Any special mark/embossed required for the particular project shall be confirmed with the
+CIMCON Software India Pvt. Ltd. (“CIMCON” or “Buyer”) before manufacturing starts (In that case,
+printed labels shall not be acceptable). All labels/markings should be designed as per the approved
+Quality Assurance Plan (‘QAP’).
+
+2. GUARANTEE/WARRANTY
+
+Guarantee/Warranty period starts from 18 Months from the date of commissioning or 24 Months
+from the date of last supply, whichever is earlier. Any complaint reported within the warranty period
+will be addressed and resolved within 48 hours from the time of complaint was raised. Any remote
+online support will be provided within 24 hours for calibration, testing, site installation, and
+commissioning as required. Any part found defective during this period as a consequence of bad
+design, manufacturing, or workmanship should be replaced, free of cost, by Supplier. In case
+Supplier fail to carry out repairs/replacements, CIMCON shall carry out the same at Supplier’s risk
+and cost. The repaired/replaced part shall be repaired/replaced free of cost at the site. The
+acceptance of material at the site does not relieve the Supplier of his obligation under this clause.
+The spares and service costs shall be at actual after the warranty period.
+
+3. INSPECTION OF GOODS
+
+The material shall be inspected by the TPI agencies (Assigned by CIMCON / End Customer), and
+the TPI inspection report, along with the release note, shall be submitted to the CIMCON for
+dispatch clearance. The expense for the TPI inspections shall be borne by the Supplier (if agreed
+during order finalisation). The Supplier shall raise a formal Inspection call in the Buyer’s format at
+least 7 days in advance. The Buyer reserves the right to inspect goods at the point of assembly
+and/or delivery. If the goods manufactured do not follow the approved drawings and specifications
+and as per the purchase order, the Buyer reserves the right to reject the goods in whole or in part.
+In such an event, the Buyer shall be free to buy the goods from any other source, and the Supplier
+shall be liable to reimburse the Buyer for any additional cost incurred in doing so and refund all
+the payments that have been made for the rejected material.
+
+4. DISPATCH INSTRUCTIONS
+
+Buyer shall issue Dispatch Instructions (“DI”) to the Supplier after successful inspection/testing and
+receipt of formal dispatch clearance from the end client upon submission of the TPI inspection
+report and release note. The Supplier shall prepare and submit all dispatch documents strictly in
+accordance with the DI and shall dispatch the material only after receiving written dispatch
+clearance along with the DI from the Buyer. The material shall be delivered to the address
+mentioned in the DI. Delivery shall be governed by the agreed Incoterms, with the applicable term
+being FOB. Risk in the Goods shall pass to the Buyer as per the selected Incoterm and subject to
+successful delivery and acceptance at the designated location; title shall transfer in accordance with
+the “Title and Risk Transfer” clause under the GTCA. Any deviation from the agreed INCOTERM
+requires prior written approval from the Buyer.
+
+5. INSTALLATION
+
+The installation and commissioning are in the scope of the Supplier (if agreed during order
+finalisation). The Buyer is not responsible for any materials/manpower/logistics for installation. The
+installation and commissioning shall be completed within a week after giving the clearance from
+the site (Client). Once installation and commissioning are completed the Supplier shall sign a User
+Acceptance Document (UAD) between the Supplier and the Buyer to hand over the site.
+
+6. QUALITY
+
+The material shall be manufactured strictly in accordance with the approved drawings and
+Guaranteed Technical Particulars (GTPs), and shall correspond in all respects with the description,
+sample, or original specifications thereof. The Supplier shall be bound to attach the print and
+complete details of the approved GTPs at the time of acceptance of the Purchase Order. Any
+deviation or non-conformity shall render the material liable for rejection by the Buyer, and such
+supply shall be deemed as delivery of goods not conforming to the contract. The Buyer’s decision
+in all matters relating to quality shall be final and binding. The Supplier shall also be responsible
+for any latent defects and shall guarantee the replacement of any defective parts, materials, or
+services for a further period as specified in the tender, from the end of the guarantee period. Spares
+and service costs applicable after the Defective Liability (Warranty) Period shall be provided by the
+Supplier.
+
+7. MANUFACTURING CLEARANCE
+
+The Supplier shall start the manufacturing of material only after getting a written Manufacturing
+Clearance (MC) from the Buyer after successful validation of the samples and satisfactory feedback
+from the manufacturing factory visit. If the Supplier starts the manufacturing without the Buyer's
+written clearance, the Buyer shall not be responsible for any loss due to the cancellation of the
+order. The quantity cleared in MC shall only be manufactured by the Supplier. Any material
+manufactured without getting the MC from the Buyer shall be rejected.
+
+8. QUANTITY VARIATION
+
+The Buyer reserves the right to change the quantity during the execution of the contract. The unit
+prices mentioned in the purchase order shall be applicable for change in quantity variation as per
+site required overall for additional / deletion quantity during the tenancy of the contract.
+
+9. ADDITIONAL ORDER-SPECIFIC INSTRUCTIONS
+
+9.1. Each product shall be 100% tested and calibrated at the OEM’s facility in accordance with
+the applicable manufacturing standard and approved procedures.
+9.2. Each product shall conform to the accuracy and performance parameters specified in the
+approved drawings and/or datasheets.
+9.3. Each product shall be free from any solder defects, including solder balls, flashes, or excess
+solder, and shall reflect workmanship of acceptable industrial quality.
+9.4. Each product shall be fully conformal coated in accordance with the approved
+specifications; partial coating shall not be accepted.
+9.5. Packaging shall be suitable for safe handling, storage, and transport, and shall consist of
+wooden or corrugated boxes with shrink wrap and strapping. During the monsoon season,
+the packaging must be weatherproof. The packing shall also be capable of withstanding
+part shipments without damage.
+9.6. The Supplier shall submit the following manufacturing and quality documentation, in
+English only and in the name of Cimcon Software (India) Pvt. Ltd., in soft copy format (no
+hard copies permitted):
+9.6.1. Separate report for each Serial Number.
+9.6.2. Calibration or test reports of each product.
+9.6.3. Report should contain:
+• Individual reports for each serial number, including corresponding test and
+calibration records.
+• OQC report for each flowmeter.
+• Controller test report for each serial number.
+• User Manual, finalised and approved by CIMCON.
+9.6.4. Serial numbering shall be maintained in sequential order corresponding to the
+packing list. Each serial number shall be clearly marked on the outer box and on
+the pallet, and the packing documentation shall reflect the same sequence.
+
+10. CHECKLIST FOR SUBMISSION OF INVOICES ALONG WITH DOCUMENTATION AFTER
+DISPATCH OF MATERIALS
+
+• TPI Inspection reports and release note
+• Serial number list of all items
+• Packing list identifying contents of each shipment
+• Evidence of dispatch (LR Copy)
+• E-way Bill
+• E-Invoice with Digital Signature
+• Dispatch Instruction issued by CIMCON
+• Manufacturer’s/Contractor’s guarantee certificate of Quality
+• Material Test certificate
+
+11. DEEMED ACCEPTANCE OF GENERAL AGREEMENT
+
+By accepting this Purchase Order (“PO”) or by commencing performance (including supply,
+shipment, or invoicing), the Supplier acknowledges and agrees that:
+11.1. This PO is issued pursuant to and is subject to the General Terms & Conditions Agreement
+(GTCA) as adopted by the Buyer;
+11.2. The GTCA shall be deemed incorporated into and form an integral part of this PO; and
+11.3. In the event of any conflict, the terms of this PO shall prevail only to the extent of the
+specific commercial scope stated herein, and all other rights and obligations shall
+continue to be governed by the GTCA.
+If the Supplier does not agree to the GTCA, it must notify the Buyer within 2 working days of
+issuance of this PO, failing which the PO and the GTCA shall be deemed accepted in full.
+
+General Terms and Conditions Agreement
+
+
+1. DEFINITIONS AND INTERPRETATION
+
+1.1. Definitions:
+
+In this General Terms & Conditions Agreement (“GTCA”), unless the context otherwise requires,
+
+1.1.1. “Buyer” means CIMCON Software (India) Private Limited, the entity issuing the Purchase Order (“PO”)
+and shall include its successors, permitted assigns, and affiliates.
+
+1.1.2. “Supplier” means the entity supplying the Goods and/or Services under the PO and shall include its
+successors and permitted assigns.
+
+1.1.3. “Goods” means all equipment, materials, articles, components, software, documentation, or other
+tangible or intangible items supplied by the Supplier pursuant to a PO.
+
+1.1.4. “Services” means all activities performed by the Supplier under a PO, including installation,
+commissioning, technical support, warranty services, inspection, training, or related services.
+
+1.1.5. “Purchase Order” or “PO” means the document issued by the Buyer for procurement of Goods and/or
+Services, including order-specific commercial terms, specifications, annexures, technical documents,
+drawings, schedules, and any amendments thereto.
+
+1.1.6. “Contract” means the collective agreement between the Buyer and Supplier comprising this GTCA and the
+applicable PO(s), together with all attachments, annexures, specifications, and amendments.
+
+1.1.7. “Specifications” means the technical or functional requirements, drawings, standards, quality parameters,
+and performance criteria as described in the PO or otherwise communicated in writing by the Buyer.
+
+1.1.8. “Site” means the location designated by the Buyer for delivery, installation, or performance of Services.
+
+1.1.9. “Delivery Date” means the date on which Goods and/or Services are required to be delivered or performed,
+as specified in the PO.
+
+1.1.10. “Working Day” means a day other than a Saturday, Sunday, or public holiday on which banks in the
+jurisdiction of the Buyer are open for business.
+
+1.1.11. “Confidential Information” means all business, commercial, technical, proprietary, and financial
+information disclosed by the Buyer to the Supplier, in any form, whether oral, written, electronic, or otherwise,
+including PO details, specifications, and customer information.
+
+1.1.12. “Applicable Law” includes all central, state, and local laws, rules, regulations, notifications, labour laws,
+anti-bribery and anti-corruption laws, export control laws, ESG-related requirements, and directives issued by
+authorities having jurisdiction.
+
+1.1.13. “Force Majeure Event” has the meaning assigned under Clause 20.
+
+1.1.14. “Customer” means any third party to whom the Buyer supplies, sells, leases, or provides Goods or Services
+that are procured under the PO.
+
+1.2. Interpretation:
+
+Unless the context requires otherwise:
+
+1.2.1. References to the singular include the plural and vice versa.
+
+1.2.2. References to a person include individuals, partnerships, companies, associations, trusts, and other legal entities.
+
+1.2.3. References to any law include amendments, re-enactments, rules, regulations, or notifications issued thereunder.
+
+1.2.4. Headings are for convenience only and shall not affect interpretation.
+
+1.2.5. References to “including” or “include” shall mean “without limitation.”
+
+1.2.6. No drafting ambiguity shall be construed against either party solely by reason of that party being the drafter.
+
+2. APPLICABILITY & DEEMED ACCEPTANCE
+
+2.1. Scope and Applicability
+
+This General Terms & Conditions Agreement (“GTCA”) governs all purchases of Goods and/or Services by the
+Buyer from the Supplier. The GTCA shall automatically apply to all present and future Purchase Orders (“POs”)
+issued by the Buyer to the Supplier, irrespective of whether the GTCA is expressly referenced in the PO.
+
+2.2. Integration with Purchase Orders
+Each PO issued by the Buyer shall be read with, and shall form an integral part of, this GTCA. Together, the PO and this GTCA constitute the Contract between the Buyer and the Supplier. In the event of any inconsistency between the PO and this GTCA, the PO shall prevail only to the extent of the specific commercial terms stated therein (including price, quantity, scope, and delivery dates); all other terms shall be governed by this GTCA.
+
+2.3. Deemed Acceptance
+The Supplier shall be deemed to have accepted the PO and this GTCA upon the earlier of:
+    2.3.1. written acknowledgement;
+    2.3.2. commencement of production or provision of Services;
+    2.3.3. dispatch of Goods;
+    2.3.4. submission of invoice; or
+    2.3.5. failure to notify non-acceptance within three (3) working days from the date of issue of the PO.
+This GTCA may also be accepted separately by signature; however, failure to sign does not affect the enforceability of this GTCA pursuant to this Clause 2.3.
+
+2.4. Rejection of Supplier Terms
+
+Any terms or conditions contained in the Supplier’s quotation, acknowledgement, invoice, delivery documents, or
+other communication shall be of no effect and shall not bind the Buyer unless expressly agreed in writing by the Buyer.
+
+2.5. Exclusion of Prior Arrangements
+
+Unless expressly stated otherwise, this GTCA supersedes all prior verbal or written understandings, negotiations,
+or arrangements between the parties concerning the subject matter, except where a specific master supply
+agreement or written contract is executed and expressly overrides this GTCA.
+
+3. PURCHASE ORDER ACCEPTANCE
+
+Acceptance of the purchase order shall be given by the Supplier in writing within 3 days of receipt of this purchase order, failing which the Supplier will be deemed to have accepted the order at the stated terms and conditions.
+
+4. PRICE / RATE
+
+The prices/rates are firm and fixed till completion of the order, and no price escalation is allowed under any circumstances. The rates mentioned in the Purchase Order shall remain valid till the satisfactory completion of the agreed scope of supply.
+
+5. APPLICABLE TAXES
+
+Goods and Service Tax (GST) @ 18% or other rate prevailing at the time of supply. Tax Collection at Source (TCS)
+inclusion in the tax invoice is not applicable. However, CIMCON shall deduct TDS @ 0.1% on the tax invoices / BOE,
+as applicable. Any taxes to be withheld in accordance with the applicable law shall be deducted from the amounts payable to Supplier. Supplier agrees to provide any tax related documentation if required for the tax compliances.
+
+6. COMPLIANCE WITH LAWS
+
+6.1. The Supplier shall, at all times, comply with all applicable central, state, and local laws, rules, and regulations, including without limitation those relating to labour, employment, environmental protection, product safety, taxation, anti-money laundering, anti-bribery and corruption, export controls, trade sanctions, ESG standards, and any local regulatory consents or permits.
+
+6.2. The Supplier shall maintain all licences, approvals, and registrations required for performance of its obligations and shall indemnify the Buyer for any liability arising from non-compliance.
+
+7. MSME DECLARATION & PAYMENT COMPLIANCE
+
+7.1. If the Supplier is registered as an MSME, it shall furnish a valid UDYAM Registration Certificate and notify the Buyer promptly of any change in status.
+
+7.2. Payments to MSME-registered Suppliers shall be released strictly in accordance with the provisions of the Micro, Small and Medium Enterprises Development Act, 2006, as amended from time-to-time (“MSMED Act”), subject to complete and compliant submission of invoices and documentation.
+
+7.3. Notwithstanding the above, the Supplier acknowledges that delayed submission of invoices, documentation discrepancies, or non-compliance with contractual obligations may affect payment timelines.
+
+7.4. In case of incorrect or misleading declaration of MSME status, the Supplier shall indemnify the Buyer for any resultant cost, penalties, or losses.
+
+8. ANTI-CORRUPTION POLICY
+
+The Buyer has zero tolerance concerning corruption in any shape. Suppliers are advised to adhere in total and do nothing of the sort which could lead to the tarnishing of their image, blacklisting of the Seller including forfeiting of payable dues. Influencing employees for any kind of favour through unethical means shall not be tolerated by the management of CIMCON.
+
+9. CONFIDENTIALITY
+
+Supplier shall maintain strict confidentiality in respect of the information gathered from CIMCON and the contract. In case it becomes necessary to disclose such information to any third party, then written confirmation shall be obtained by the Supplier from CIMCON. Suppliers cannot claim CIMCON as customers in any media or verbal. Suppliers do not get marketing rights for CIMCON products. CIMCON will provide the design of customised labels. The Supplier agrees that he/they will not use, sell, loan, or publicise any of the specifications, blueprints, or designs, supplied or paid for by the Buyer for fulfilment of this order without prior written consent from the Buyer.
+
+10. DATA PROTECTION
+
+10.1. To the extent the Supplier receives, accesses, or processes any personal data or business-sensitive data of the Buyer, its employees, customers, or affiliates, the Supplier shall comply with all applicable data protection and privacy laws, including the Digital Personal Data Protection Act, 2023.
+
+10.2. The Supplier shall implement adequate technical and organisational measures to protect such data against unauthorised access, disclosure, alteration, or loss and shall notify the Buyer promptly in the event of any actual or suspected data breach.
+
+11. HEALTH, SAFETY AND ENVIRONMENT (HSE)
+
+11.1. The Supplier shall comply with all applicable HSE laws, regulations, and standards, as well as the Buyer’s reasonable HSE policies communicated from time to time.
+
+11.2. Where the Supplier’s personnel are required to work at the Buyer’s or its Customer’s site, the Supplier shall ensure that such personnel adhere to site safety instructions, mandatory protective equipment standards, and reporting protocols.
+
+11.3. Any accident, injury, or environmental incident occurring in connection with Goods or Services under this Purchase Order shall be immediately reported to the Buyer in writing. The Supplier shall be liable for costs, damages, or claims arising out of any breach of HSE obligations. The Supplier shall delete or return such data promptly upon completion of services or termination of the Purchase Order, unless retention is required under
+applicable law.
+
+12. PACKING / FORWARDING
+Goods supplied against this purchase order shall be properly packed in line with best industry practices to ensure safe transport by SEA / AIR / SURFACE / RAIL to the place stipulated in this order. No charges shall be paid for packing. The material shall be packed carefully to prevent damage during transit. Hence, all prices are inclusive of Packing and Forwarding charges.
+
+13. ACCEPTANCE OF GOODS
+
+13.1. Acceptance of any of the goods shall not discharge the Supplier from liability for other legal remedy for any breach of any condition or warranty contained herein or implied by law and if after accepting the goods or any of them any defects therein either in material, workmanship or otherwise become known to the Buyer and such defects amount to a breach of any condition or warranty hereunder or implied by law, the Buyer shall forthwith notify the Supplier of such defects and shall (in addition to any other rights or remedies that the Buyer may possess) be entitled to reject the defective goods and hold the same at the Supplier’s risk.
+
+13.2. The Supplier shall be responsible and be liable to replace or to repair at the option of the Buyer, free of cost, goods supplied under this order or any part thereof if any defect in the composition or substance material workmanship or process of manufacture or the design of the goods is brought to the notice of the Supplier within 24 calendar months from the date of delivery.
+
+14. TITLE AND RISK TRANSFER
+
+Title to the Goods shall pass to the Buyer only upon full delivery at the delivery point specified in the Purchase Order and upon payment against the relevant invoice, unless otherwise agreed in writing. Risk in the Goods shall transfer to the Buyer only upon successful delivery, inspection, and written acceptance by the Buyer. Until such transfer of title and risk, the Supplier shall bear all risk of loss, damage, deterioration, or theft of the Goods.
+
+15. COMPLETENESS
+
+Supplier confirms that the complete requirements as contained in the Drawings / Specifications / Clarifications submitted are understood and all items of the Project whether specifically mentioned or not in Technical Specification, are necessary for completeness, and for safe and efficient operation, maintenance and guaranteed performance shall be supplied by the Supplier at no extra cost.
+
+16. EXCESS SUPPLIES
+
+Material must not be more than quantity ordered. The Buyer assumes no obligation concerning such excess quantity. The Supplier must remove such excess supplies at his own risk and cost.
+
+17. COMPLIANCE
+
+Goods and services shall conform to the requirements of the contract and shall be fit for purpose. They shall be made or performed following good engineering practices and all applicable standards and legislation. Goods shall be delivered complete with all instructions, warnings, and other data necessary for safe and proper operation. Goods or services which do not comply with all of the above shall be considered to be defective. If for any reason the Supplier is uncertain as to whether the goods or services to be supplied by it will comply with any of the above, it must promptly and before dispatch inform the Buyer in writing with full details of the possible non-compliance for consideration. Written acceptance or rejection of the Supplier’s application will then be provided by the Buyer in as timely a manner as possible.
+
+18. SUBCONTRACTING / ASSIGNMENT
+
+The Supplier shall not subcontract, assign, transfer, or delegate any of its rights or obligations under this Purchase Order, in whole or in part, without the prior written consent of the Buyer. The Supplier shall remain fully responsible for the acts, omissions, performance, and defaults of its approved subcontractors.
+The Buyer reserves the right to assign or novate its rights and obligations under this Purchase Order to an affiliate or group entity by written notice to the Supplier.
+
+19. INDEMNITY
+
+CIMCON and its associated companies, subsidiaries, and its Directors, personnel, officers, and employees shall be indemnified and held harmless by the supplier for and against any liabilities, losses, damages, claims, costs and expenses, interest and penalties (including without limitation, attorney fees and expenses) suffered or incurred by CIMCON arising out of resulting from the breach of any representation, warranty, covenant or obligation made by the supplier in the PO.
+
+20. FORCE MAJEURE
+
+The Supplier shall be under no liability for failure to deliver and the Buyer for failure to accept delivery of goods or any part thereof when such failure is due to natural events such as fire, earthquakes, floods, strikes, lock-outs, transportation, embargoes, act of God, State enemies, or any other causes whatsoever beyond
+the control of the Supplier or Buyer.
+
+21. CANCELLATION / AMENDMENT
+
+The Buyer reserves the right to cancel or amend this agreement or any part thereof without assigning any reason.
+
+22. REMOVAL OF REJECTED GOODS
+
+22.1. The Supplier shall remove the rejected goods from the Buyer’s warehouse or site at his / their own cost   within seven (7) days from the date of intimation from the Buyer of their refusal to accept the goods. The Buyer shall not be responsible for or be held liable for any loss or deterioration of the rejected goods.
+
+22.2. The Supplier shall pay to Buyer reasonable storage charges for such rejected goods for the period exceeding seven (7) days as aforesaid.
+
+23. DISPUTE RESOLUTION
+
+Any dispute and claims between the Parties to the Agreement arising out of or incidental thereto or in connection with the Agreement, or the breach, or Invalidity thereof, or its performance shall be referred to the Director of CIMCON, and decision of Director of CIMCON shall be final and binding. No Arbitration is allowed under this agreement.
+
+24. JURISDICTION OF COURTS
+The Law Courts at Ahmedabad, Gujarat, India shall have exclusive jurisdiction in the matter arising under this agreement.

@@ -256,6 +256,28 @@ const POLineItems: React.FC = () => {
       ),
     },
     {
+      field: "po_type",
+      headerName: "PO Type",
+      width: 120,
+      sortable: true,
+      renderCell: (params) => {
+        const poType =
+          (params.row as any)?.po_type || (params.row as any)?.poType || "domestic";
+        const isOverseas = poType === "overseas";
+        return (
+          <Chip
+            label={isOverseas ? "Overseas" : "Domestic"}
+            size="small"
+            sx={{
+              backgroundColor: isOverseas ? "#fff7ed" : "#eff6ff",
+              color: isOverseas ? "#9a3412" : "#1d4ed8",
+              fontWeight: 600,
+            }}
+          />
+        );
+      },
+    },
+    {
       field: "item_no",
       headerName: "Item No",
       width: 130,

@@ -102,12 +102,23 @@ def add_horizontal_line(paragraph):
 
 @api_view(['GET'])
 def fetch_terms_from_file(request):
-    file_path = os.path.join(settings.BASE_DIR, 'master', 't&c.txt')
+    po_type = request.query_params.get('po_type', 'domestic')
+    filename = 't&c_overseas.txt' if po_type == 'overseas' else 't&c.txt'
+    file_path = os.path.join(settings.BASE_DIR, 'master', filename)
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
         return HttpResponse(content, content_type='text/plain')
     except FileNotFoundError:
+        if po_type == 'overseas':
+            # Fallback to domestic terms if overseas-specific file is missing
+            fallback_path = os.path.join(settings.BASE_DIR, 'master', 't&c.txt')
+            try:
+                with open(fallback_path, 'r', encoding='utf-8') as file:
+                    content = file.read()
+                return HttpResponse(content, content_type='text/plain')
+            except FileNotFoundError:
+                return HttpResponse("Terms and Conditions file not found.", status=404)
         return HttpResponse("Terms and Conditions file not found.", status=404)
     except UnicodeDecodeError:
         return HttpResponse("Could not decode the file. Try saving it as UTF-8.", status=500)
@@ -267,6 +278,7 @@ def generate_po(request):
         total_in_words = data.get('totalInWords', 'N/A')
         terms_and_conditions = data.get('terms_and_conditions', '')
         terms = po_details.get('terms', {})
+        po_type = data.get('po_type', 'domestic')
         
         # Log the original items data
         logger.info("Original items data:")
@@ -381,20 +393,35 @@ def generate_po(request):
         # Load terms and conditions from file if not provided
         if not terms_and_conditions or terms_and_conditions.strip() == '':
             try:
-                tc_path = os.path.join(os.path.dirname(__file__), "t&c.txt")
+                tc_filename = "t&c_overseas.txt" if po_type == 'overseas' else "t&c.txt"
+                tc_path = os.path.join(os.path.dirname(__file__), tc_filename)
                 if os.path.exists(tc_path):
                     with open(tc_path, 'r', encoding='utf-8') as tc_file:
                         terms_and_conditions = tc_file.read()
                         logger.info(f"Loaded terms and conditions from file: {len(terms_and_conditions)} characters")
                 else:
-                    logger.warning(f"Terms and conditions file not found at: {tc_path}")
-                    terms_and_conditions = "Terms and conditions file not found."
+                    # Fallback to domestic terms for overseas if overseas file missing
+                    if po_type == 'overseas':
+                        fallback_path = os.path.join(os.path.dirname(__file__), "t&c.txt")
+                        if os.path.exists(fallback_path):
+                            with open(fallback_path, 'r', encoding='utf-8') as tc_file:
+                                terms_and_conditions = tc_file.read()
+                                logger.warning(
+                                    f"Overseas terms not found at {tc_path}; loaded domestic terms instead"
+                                )
+                        else:
+                            logger.warning(f"Terms and conditions file not found at: {fallback_path}")
+                            terms_and_conditions = "Terms and conditions file not found."
+                    else:
+                        logger.warning(f"Terms and conditions file not found at: {tc_path}")
+                        terms_and_conditions = "Terms and conditions file not found."
             except Exception as e:
                 logger.error(f"Error reading terms and conditions: {str(e)}")
                 terms_and_conditions = "Error loading terms and conditions."
 
         # Prepare PDF data structure with complete mapping
         pdf_data = {
+            'po_type': po_type,
             'po_details': {
                 'poNumber': po_number,
                 'poDate': po_date,
